@@ -39,8 +39,11 @@ export default function UserChat({ users }) {
         setGenders(genderRender)
         setOld(oldRender)
     }, [users])
-
-    const chartOptions = {
+    interface typeChartOptionGender {
+        series: number[],
+        options: {},
+    }
+    const chartOptions:typeChartOptionGender = {
         series: old,
         options: {
             chart: {
@@ -80,7 +83,7 @@ export default function UserChat({ users }) {
 
     }
 
-    const chartOptionsGender = {
+    const chartOptionsGender:typeChartOptionGender = {
         series: genders,
         options: {
             chart: {
